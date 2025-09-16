@@ -1,0 +1,383 @@
+@import "tailwindcss";
+
+
+html, body {
+  font-family: "Noto Sans Georgian", sans-serif;
+  background-color: #fafafa;
+  color: #141719;
+  font-size: 14px;
+  padding-top: 40px;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 5s cubic-bezier(0.25,1,0.5,1), opacity 1s ease-out;
+}
+
+
+#navbar{
+    height: 80px;
+    font-size: 14px;
+    z-index: 50;
+    transition: top 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.navbar.scrolled-up{
+    transform: translateY(0);
+    background-color: rgba(255, 255, 255, 0.95); /* semi-transparent white */
+    backdrop-filter: blur(7px);
+    opacity: 1;
+    transition: transform 5s cubic-bezier(0.25,1,0.5,1), opacity 1.2s ease-out, background-color 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.contentContainer {
+  width: 1107.8px;
+}
+
+
+
+#logo{
+  width: 47px !important;
+}
+
+.mainText{
+  font-size: 31px;
+  font-weight: 700;
+}
+
+
+.almostCubeImageContainer {
+  max-width: 550px;
+  position: relative;
+  margin: auto;
+  height: 350px !important;
+  margin-right: 0;
+}
+
+.leaveItemContainer{
+  max-width: 590px;
+  position: relative;
+  
+  margin-right: 24px;
+  height: 482px !important;
+  overflow: hidden; /* crop zoomed image */
+  display: inline-block; /* keeps the size fixed */
+  border-radius: 10px;
+  
+}
+
+.leaveItem{
+
+transition: transform 1s ease;
+}
+
+.leaveItemContainer:hover .leaveItem{
+  transform: scale(1.17);   /* start off to the right */
+}
+
+.similarImgsContainer{
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  height: 230px !important;
+   overflow: hidden; /* crop zoomed image */
+  border-radius: 10px;
+}
+
+
+.buyItem, .sellItem{
+  
+  max-height: 100%;
+  width: 500px;
+   object-fit: cover;
+  margin: 0 auto;
+  border-radius: 10px;
+  transition: transform 1s ease;
+}
+
+.similarImgsContainer:hover .buyItem, .similarImgsContainer:hover .sellItem{
+  transform: scale(1.17);   /* start off to the right */
+}
+
+.almostCubeImg, .leaveItem{
+  width: 100%;
+  height: 100% !important ;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+
+h2{
+  font-size: 25.7px;
+  font-weight: bold;
+}
+
+
+.textOnDiv {
+    padding: 8px 12px;
+  position: absolute;
+  /* top: 8rem;
+  left:10rem; */
+}
+
+.textOnContainer{color: #f2f2f2;
+  font-size: 20.8px;
+  width: 100%;
+  height: 35%;
+  text-align: left;
+  margin-top: 44px;
+  margin-left: 10px;
+  align-self: center;
+  font-weight: 599;}
+
+
+
+
+.textOnSimilarContainer{
+  color: #f2f2f2;
+  font-size: 20.8px;
+  width: 100%;
+  height: 35%;
+  text-align: left;
+  margin-left: 10px;
+  align-self: center;
+  font-weight: 599;
+  margin-bottom: 32px;
+}
+
+
+
+
+.invitationContainer{
+  
+  width:  100%;
+  position: relative;
+  
+  margin-right: 24px;
+  height: 170px !important;
+  overflow: hidden; /* crop zoomed image */
+  display: inline-block; /* keeps the size fixed */
+  border-radius: 10px;
+  
+}
+
+
+.textOnInvitationDiv {
+    padding: 8px 12px;
+  position: absolute;
+  /* top: 8rem;
+  left:10rem; */
+}
+
+.textOnInvitationContainer{color: #f2f2f2;
+  
+  font-size: 28px;
+  width: 100%;
+  height: 50%;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 289px;
+  margin-left: 100px;
+  align-self: center;
+  font-weight: 700;
+}
+
+
+.horizontalLineInDiv{
+  color: #e3e3e3;
+  background-color: #e3e3e3;
+  width: 1000px;
+  height: 1.4px;  
+  border-radius: 10px;
+}
+
+.invitationContainersContainer{
+  
+  width:  27%;
+  position: relative;
+  
+  height: 115.5% !important;
+  overflow: hidden; /* crop zoomed image */
+  display: inline-block; /* keeps the size fixed */
+  border-radius: 10px;
+  background-color:   #ffffff;
+  
+}
+
+
+.containerPositioner{
+  position: absolute;
+  color: #f2f2f2;
+  font-size: 28px;
+  text-align: left;
+  
+  margin-left: 325px;
+  align-self: center;
+  font-weight: 700;
+
+}
+
+.PercentCubeImageContainer{
+  background-color: #ffffff;
+  border-radius: 10px;
+  
+  height: 250px;
+  width: 345px;
+
+  border-width: .8px;
+  border-color: #f0f2f2;
+
+  padding: 24px;
+}
+
+
+.percentIconContainer{
+
+background-color: #A4C1E5;
+border-radius: 10px;
+  
+height: 64px;
+width: 64px;
+
+}
+
+
+.percentNum{
+  color:#2f62a1;
+  font-weight:900;
+  font-size: 19px;
+}
+
+.boxHeading{
+  font-size: 19px;
+}
+
+.boxText{
+  color:#788082;
+}
+
+
+.boxText:hover{
+  color:#353c3d;
+}
+
+
+.upFooter{
+background-color: #ffffff;
+
+
+}
+
+.footerBoxHeading{
+font-weight: 700;
+
+}
+
+
+
+
+
+.horizontalLineInDivBott{
+  color: #e3e3e3;
+  background-color: #e3e3e3;
+  width: 100%;
+  height: 0.5px;  
+  border-radius: 10px;
+}
+
+
+
+.iconDiv{
+  width: 40px;
+  height: 40px;
+
+  background-color: #f5f7f7;
+  border-radius: 5px;
+}
+
+.iconDiv:hover{
+  background-color:#f0f2f2;
+
+}
+
+.iconLogo{
+  border-radius: 5px;
+}
+
+
+
+/* .whiteWholeBG{
+  background-color: #ffffff;
+} */
+
+
+
+#about h1{
+  font-size: 30px;
+  font-weight: 550;
+}
+
+#about h2 {
+   font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 2.50px;
+}
+
+
+.rulesContainer{
+  color: #f2f2f2;
+  font-size: 28px;
+  width: 100%;
+  height: 332px;
+  text-align: left;
+  align-self: center;
+  font-weight: 700;
+  background-image: url(../images/rules.jpg);
+   background-size: cover;
+   border-radius: 10px;
+  
+}
+
+
+.rulesTitleContainer{
+  padding-left: 140px;
+  padding-top: 82.53px;
+}
+
+
+.rulesTitle{
+ font-size: 35px;
+}
+
+.rulesSubtitle{
+  font-size: 17px !important;
+  font-weight: 400;
+
+}
+
+#rules h2 {
+  font-size: 25px;
+}
+
+#rules h3{
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+#onGooglemaps{
+   width: 100%;
+  height: 332px;  
+
+}
