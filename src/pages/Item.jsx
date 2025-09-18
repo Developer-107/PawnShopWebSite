@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import MainPageInvitationDiv from "../components/MainPageInvitationDiv";
 
 
 export default function Item() {
