@@ -1,10 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import SellingItem from "../assets/images/SellingItem.jpg";
 
 export default function MainPageSecondInfoDiv() {
 
 
 
-
+  const navigate = useNavigate();
 
 
   
@@ -25,7 +26,7 @@ export default function MainPageSecondInfoDiv() {
                                         თუ არა შენთვის სასურველი ნივთი გასაყიდად, <br/>
                                          მიიღო გასაყიდ ნივთების მდგომარეობასა და ფასის შესახებ <br/>ინფორმაცია </p>
         <br></br>
-        <button class="button">გასაყიდი ნივთების ნახვა</button>
+        <button onClick={() => navigate("/items")} class="button">გასაყიდი ნივთების ნახვა</button>
 
      </div>
     
