@@ -618,3 +618,16 @@ input[type=number] {
   color: #141719;
   font-weight: 550;}
 
+.category{
+  margin: 16px 0px 16px 0px;
+  font-size: 12.70px;
+  
+
+  color: oklch(55.1% 0.027 264.364);
+  font-weight: 400;
+}
+
+.categoryActive{
+  color: black;
+  font-weight: 500;
+}
