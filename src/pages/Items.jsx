@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Items() {
+export default function Items() {  
   const { pathname, hash } = useLocation();
   const [min, setMin] = useState(1);
   const [max, setMax] = useState(49999);
@@ -11,94 +11,19 @@ export default function Items() {
   const [chosenFilter, setChosenFilter] = useState("ყველა");
   const [selectedCategory, setSelectedCategory] = useState("ყველა"); 
 
-  
-  const list = [
-    {
-      id: 1,
-      type: "ტელევიზორი",
-      brand: "Samsung ",
-      model: "G10i",
-      state: "უხმარი",
-      priceSale: 1000,
-      priceBefore: 1400,
-      url: "https://news.samsung.com/my/wp-content/uploads/2024/01/20240104_01_01.jpg",
-    },
-    {
-      id: 2,
-      type: "ტელევიზორი",
-      brand: "LG ",
-      model: "OLED C1",
-      state: "უხმარი",
-      priceSale: 2000,
-      priceBefore: 2500,
-      url: "https://www.lg.com/us/images/tvs/md07506472/gallery/desktop-01.jpg",
-    },
-    {
-      id: 3,
-      type: "მობილური",
-      brand: "iPhone ",
-      model: "14",
-      state: "უხმარი",
-      priceSale: 1400,
-      priceBefore: 1700,
-      url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-purple-select-2022",
-    },
-    {
-      id: 4,
-      type: "მობილური",
-      brand: "Samsung Galaxy",
-      model: " S23",
-      state: "უხმარი",
-      priceSale: 1300,
-      priceBefore: 1600,
-      url: "https://images.samsung.com/is/image/samsung/p6pim/levant/sm-s911ezwdmea/gallery/levant-galaxy-s23-s911-445380-sm-s911ezwdmea-530490551?$650_519_PNG$",
-    },
-    {
-      id: 5,
-      type: "ლეპტოპი",
-      brand: "Dell",
-      model: " XPS 15",
-      state: "უხმარი",
-      priceSale: 2200,
-      priceBefore: 2500,
-      url: "https://i.dell.com/sites/csimages/Merchandizing_Imagery/all/xps-15-9530-laptop.jpg",
-    },
-    {
-      id: 6,
-      type: "ლეპტოპი",
-      brand: "MacBook ",
-      model: "Pro 16",
-      state: "უხმარი",
-      priceSale: 3500,
-      priceBefore: 4000,
-      url: "https://www.apple.com/v/macbook-pro-16/h/images/overview/hero/hero_endframe__bsza6x4fldiq_large.jpg",
-    },
-    {
-      id: 7,
-      type: "ყურსასმენი",
-      brand: "Sony",
-      model: " WH-1000XM5",
-      state: "უხმარი",
-      priceSale: 800,
-      priceBefore: 1000,
-      url: "https://imgstore.alta.ge/images/400/145/145736_4792_2.webp",
-    },
+  const[list, setList] = useState([])   
 
-    {
-      id: 8,
-      type: "ყურსასმენი",
-      brand: "Sony ",
-      model: "WH-1000XM5",
-      state: "უხმარი",
-      priceSale: 800,
-      priceBefore: 1000,
-      url: "https://www.sony.com/image/wh1000xm5-b.jpg",
-    },
-  ];
+    useEffect(() => {
+  fetch(`/api/items`)
+    .then((res) => res.json())
+    .then((data) => {
+      setList(data.list || []);
+    });
+}, []);
 
   const filteredList = list.filter(
     (item) => {
-  const inPrice = item.priceSale >= min && item.priceSale <= max;
+  const inPrice = item.pricesale >= min && item.pricesale <= max;
   const inCategory =
     selectedCategory === "ყველა" || item.type === selectedCategory;
   return inPrice && inCategory;
@@ -108,9 +33,9 @@ export default function Items() {
   const sortedList = [...filteredList].sort((a, b) => {
     switch (chosenFilter) {
       case "ფასის ზრდით":
-        return a.priceSale - b.priceSale;
+        return a.pricesale - b.pricesale;
       case "ფასის კლებით":
-        return b.priceSale - a.priceSale;
+        return b.pricesale - a.pricesale;
       case "ა - ჰ":
         return a.brand.localeCompare(b.brand);
       case "ჰ - ა":
@@ -648,9 +573,9 @@ export default function Items() {
                     {item.type}
                   </p>
                   <p className="text-[17px] text-green-700  font-bold self-start pl-[22.5px] mt-[12px]">
-                    {item.priceSale}₾{" "}
+                    {item.pricesale}₾{" "}
                     <span className="text-[14px] text-semibold line-through text-gray-400 ml-1">
-                      {item.priceBefore}₾
+                      {item.pricebefore}₾
                     </span>
                   </p>
                   <div className="flex buttonInItemsContainer gap-4 justify-end my-2">
