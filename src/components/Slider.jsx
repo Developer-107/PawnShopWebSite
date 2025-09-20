@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "../assets/css/Slider.css"
+import "../assets/css/slider.css"
 import Slider1 from "../assets/images/sliders/slider1.jpg"
 import Slider2 from "../assets/images/sliders/slider2.jpg"
 import Slider3 from "../assets/images/sliders/slider3.jpg"
 import Slider4 from "../assets/images/sliders/slider4.jpg"
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { useNavigate } from "react-router-dom";
 
 
