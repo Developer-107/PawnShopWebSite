@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function About() {
 
 
   const { pathname, hash } = useLocation();
+  const [isVacanciesOpen, setIsVacanciesOpen] = useState(false);
 
 useEffect(() => {
   if (hash) {
@@ -65,7 +66,61 @@ useEffect(() => {
 შეძენა იქნება წარმატებული და კომფორტული.
 </p>
 
-    
+    <hr className="w-1/2 mx-auto mt-25 self-center horizontalLineInDiv"/>
+
+<div id="vacancies" className="flex flex-col !mt-25 vacanciesDiv " >
+<div className="flex flex-row items-center cursor-pointer" onClick={() => {setIsVacanciesOpen(!isVacanciesOpen)}}> 
+  <h2> ვაკანსიები</h2>
+  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    style={{ transform: `rotate(${isVacanciesOpen ? 270 : 90}deg)`,     transition: "transform 0.7s ease-in-out", // duration + easing
+ }}
+                    width="1em"
+                    height="1em"
+                    fill="none"
+                    viewBox="0 0 7 15"
+                    className="flex ml-auto"
+                  >
+                    <path
+                      stroke="#292D32"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.7"
+                      d="m.712 1.56 4.89 4.89a1.49 1.49 0 0 1 0 2.1l-4.89 4.89"
+                    ></path>
+                  </svg>
+                  </div> 
+
+  {isVacanciesOpen && (
+    <div className="" >
+    <hr className="w-1/2 mx-auto mt-[20px] self-center horizontalLineInDiv"/>
+    <div className="mt-4 vacanciesContent fadeIn transition-transform duration-500 ease-in-out px-4">
+      <br/>
+<h3 className="mb-3">მოლარე/კონსულტანტი</h3>
+<div className="">
+<p>
+ტექნიკის სახლი Cash EE აცხადებს ვაკანსიას მოლარე/კონსულტანტის პოზიციაზე. 
+ჩვენ ვეძებთ პასუხისმგებელ და კომუნიკაბელურ ადამიანს, რომელიც შეძლებს მომხმარებლების სწრაფ და ეფექტურ მომსახურებას, 
+მობილურების შეფასებას, iCloud-ის დაყენებას და სხვადასხვა სერვისის შეთავაზებას.
+</p>
+<br/>
+<h4 className="mb-1">ძირითადი მოვალეობები:</h4>
+<ul className="list-disc list-inside">
+  <li>მომხმარებლების დახვედრა და მათთვის სწრაფი და ხარისხიანი მომსახურების გაწევა;</li>
+  <li>მობილური ტელეფონებისა და სხვა ტექნიკის ღირებულების შეფასება;</li>
+  <li>მომხმარებლისთვის iCloud-ის და სხვა საჭირო სერვისების დაყენება;</li>
+  <li>სერვისული მომსახურების შეთავაზება და კონსულტაცია;</li>
+  <li>გაყიდვების და მომსახურების პროცესში დახმარება;</li>
+  <li>თანამშრომლობა გუნდთან მომხმარებლის გამოცდილების გაუმჯობესებისთვის;</li>
+  <li>ფულადი ოპერაციების სიზუსტით შესრულება და სალაროს მართვა.</li>
+</ul>
+<br/>
+
+</div>
+
+</div></div>)}
+  </div>
 
     </div>
     </div>

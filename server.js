@@ -15,7 +15,6 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const client = new Pool({  
-  
  user: process.env.USER,
   password: process.env.PASSWORD,
   host: process.env.HOST,

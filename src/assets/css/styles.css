@@ -631,3 +631,46 @@ input[type=number] {
   color: black;
   font-weight: 500;
 }
+
+
+
+.vacanciesDiv{
+  width: 100%;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: #ebebeb;
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 35px;
+}
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* slight slide */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+
+
+
+.vacanciesContent h3{
+  font-size: 17px;
+  font-weight: 550;
+}
+.vacanciesContent h4{
+  font-size: 15.1px;
+  font-weight: 500;
+}
+

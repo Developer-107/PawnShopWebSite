@@ -467,7 +467,8 @@ export default function Items() {
                   <span>{chosenFilter}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    style={{ transform: `rotate(90deg)` }}
+                    style={{ transform: `rotate(${isOpenSort ? 270 : 90}deg)`,     transition: "transform 0.7s ease-in-out", // duration + easing
+ }}
                     width="1em"
                     height="1em"
                     fill="none"
