@@ -14,13 +14,11 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const client = new Pool({  
- user: process.env.USER,
-  password: process.env.PASSWORD,
-  host: process.env.HOST,
-  port: process.env.POSTGRES_PORT,
-  database: process.env.DATABASE
+const client = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }, // needed on Railway
 });
+
 
 client.connect()
   .then(() => console.log("DB connected!"))
