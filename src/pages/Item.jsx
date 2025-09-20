@@ -22,7 +22,7 @@ useEffect(() => {
   return (
     <>
     <div id='item' className="flex justify-center">
-    <div className="flex mt-[5rem] contentContainer bg-white p-10 py-20">
+    <div className="flex mt-[5rem]  contentContainer items-center bg-white p-10 py-20">
     
     
     <div className=" mr-auto">
