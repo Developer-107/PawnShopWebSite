@@ -13,13 +13,13 @@ return(
 </div>
 
 
-<div className="invitationContainer mt-25">
-        <img src={InvitationItem} alt="Invitation Photo" />
-        <div className="textOnInvitationContainer textOnInvitationDiv">მომსახურება 24/7-ზე 
-            <div className="invitationContainersContainer containerPositioner p-5 ">
-                <div className="flex">
-                <div className="py-1" style={{width: "50%"}}>
-                <p  className="font-[700] text-[12px] text-black mb-4" style={{width: "140px"}}>დაასკანერე QR კოდი</p>
+<div className="flex justify-center items-center invitationContainer mt-25">
+        
+        <div className="flex flex-col md:flex-row textOnInvitationContainer textOnInvitationDiv items-center justify-center">მომსახურება 24/7-ზე 
+            <div className="invitationContainersContainer containerPositioner p-5 xl:ml-[325px] lg:ml-[250px] md:ml-[140px] md:ml-[50px] ml-0 md:mt-0 mt-4">
+                <div className="flex gap-12 items-center">
+                <div className="py-1 " style={{width: "50%"}}>
+                <p  className="font-[700] md:text-[12px] sm:text-[10.4px] text-[10px] text-black md:mb-3 mb-2 mt-[2.5px]" style={{width: "140px"}}>დაასკანერე QR კოდი</p>
                 
                 <svg xmlns="http://www.w3.org/2000/svg" width="108" height="27" viewBox="0 0 240 60" role="img" aria-label="Find us on Google Maps">
                 <text x="42" y="22" font-family="Arial, sans-serif"
@@ -31,7 +31,7 @@ return(
                         font-size="16" font-weight="600" fill="#878787">Google Maps</text>
                 </svg>
                 </div>
-                <img className="ml-auto mb-[4px]" src={QRCodeAddress} alt="Qr Code of Address" height="55px" width="64px" />
+                <img className="ml-auto mt-[2.5px] w-16 md:w-[64px] h-auto" src={QRCodeAddress} alt="Qr Code of Address"/>
 
             </div>
         </div>

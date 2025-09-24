@@ -120,6 +120,78 @@
   margin-top: 2.5rem;
 }
 
+
+
+@media (max-width: 1280px) {
+ 
+.textButtonDiv{
+  align-self: center !important;
+  justify-content: center !important;
+  position: absolute;
+  top: 7rem !important;
+  left:2rem !important;
+  width: 100% !important;
+  align-items: center !important;
+  ;
+}
+
+
+
+.slideshow-container .text {
+  top:7rem !important;
+  font-size: 27.5px !important;  
+  height: 100px;
+  align-items: end !important;
+
+}
+
+}
+
+
+
+@media (max-width: 768px) {
+
+
+.button {
+ 
+  margin-top: 2rem;
+  width: 100% !important;
+
+}
+
+
+.textButtonDiv{
+  align-self: center !important;
+  justify-content: center !important;
+  position: absolute;
+  top: 9.5rem !important;
+  left:0rem !important;
+  width: 100% !important;
+  align-items: center !important;
+  ;
+}
+.slideshow-container .text {
+  top:8rem !important;
+  font-size: 22.5px !important;  
+  height: 100px;
+  align-items: end !important;
+
+}
+
+
+.button{
+  padding: 14.9px 20px !important;
+  font-size: 14px !important;
+  
+}
+
+
+}
+
+
+
+
+
 .button:hover {
   background-color: #244c7a;
   transform: translateY(-2px);
@@ -132,7 +204,7 @@
 }
 
 .textButtonDiv{
-   padding: 8px 12px;
+   padding: 10px 12px;
   position: absolute;
   top: 8rem;
   left:10rem;

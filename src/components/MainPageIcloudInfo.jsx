@@ -13,8 +13,8 @@ export default function MainPageIclouldInfo() {
   
   return (
     
-    <div className="flex mt-40 items-center">
-    <div > 
+    <div className="flex flex-col-reverse md:flex-row mt-40 items-center gap-7 containFlex-1s">
+    <div className="flex-1"> 
         
         
         
@@ -29,7 +29,7 @@ export default function MainPageIclouldInfo() {
     
     
     
-    <div className="flex almostCubeImageContainer flex-shrink-0"><img className="almostCubeImg" src={icloundPhoto} alt="Icloud Photo" /></div>
+    <div className="flex-1 almostCubeImageContainer "><img className="almostCubeImg" src={icloundPhoto} alt="Icloud Photo" /></div>
 
 
 

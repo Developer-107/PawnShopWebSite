@@ -9,44 +9,44 @@ return(<>
 
 <div className="flex upFooter justify-center pt-[48px] mt-35 pb-[32px]  ">
 <div className="flex flex-col contentContainer">
-<div className="flex flex-row justify-between">
+<div className="flex flex-col md:flex-row justify-between">
     <div className="flex flex-col">
-        <Link to="/rules#services" className="footerBoxHeading">მომსახურებები</Link>
-        <br/>
-        <Link to="/rules#pawningIcloud" className="boxText">აიქლაუდის დატოვება</Link>
-        <br/>
-        <Link to="/rules#pawningItem" className="boxText">ნივთის დატოვება</Link>
-        <br/>
-        <Link to="/rules#sellingItem" className="boxText">ნივთის გაყიდვა</Link>
-        <br/>
-        <Link to="/rules#buyingItems" className="boxText">ნივთის ყიდვა</Link>
+        <Link to="/rules#services" className="flex flex-row items-center footerBoxHeading">მომსახურებები <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="14" fill="none" stroke="#141719" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" className="arrow-icon ml-auto flex md:hidden"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></Link>
+        <br className="md:flex hidden"/>
+        <Link to="/rules#pawningIcloud" className="boxText md:flex hidden">აიქლაუდის დატოვება</Link>
+        <br className="md:flex hidden"/>
+        <Link to="/rules#pawningItem" className="boxText md:flex hidden">ნივთის დატოვება</Link>
+        <br className="md:flex hidden"/>
+        <Link to="/rules#sellingItem" className="boxText md:flex hidden">ნივთის გაყიდვა</Link>
+        <br />
+        <Link to="/rules#buyingItems" className="boxText md:flex hidden">ნივთის ყიდვა</Link>
     </div>
 
     <div className="flex flex-col">
-        <Link to="/rules#advantages" className="footerBoxHeading">უპირატესობები</Link>
+        <Link to="/rules#advantages" className="flex flex-row items-center footerBoxHeading">უპირატესობები <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="14" fill="none" stroke="#141719" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" className="arrow-icon ml-auto flex md:hidden"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></Link>
+        <br className="md:flex hidden"/>
+        <Link to="/rules#pricing" className="boxText md:flex hidden">უმაღლესი შეფასება</Link>
+        <br className="md:flex hidden"/>
+        <Link to="/rules#wOutFine" className="boxText md:flex hidden">გადახდა ჯარიმის გარეშე</Link>
         <br/>
-        <Link to="/rules#pricing" className="boxText">უმაღლესი შეფასება</Link>
-        <br/>
-        <Link to="/rules#wOutFine" className="boxText">გადახდა ჯარიმის გარეშე</Link>
-        <br/>
-        <Link to="/rules#freeSchedule" className="boxText">თავისუფალი გადახდის გრაფიკი</Link>
+        <Link to="/rules#freeSchedule" className="boxText md:flex hidden">თავისუფალი გრაფიკი</Link>
         
     </div>
 
      <div className="flex flex-col">
-        <Link to="/about"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="footerBoxHeading">ჩვენ შესახებ</Link>
+        <Link to="/about"  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex flex-row footerBoxHeading">ჩვენ შესახებ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="17" height="14" fill="none" stroke="#141719" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" className="arrow-icon ml-auto flex md:hidden"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></Link>
+        <br className="md:flex hidden"/>
+        <Link to="/about#whoWeAre" className="boxText md:flex hidden">ვინ ვართ ჩვენ</Link>
+        <br className="md:flex hidden"/>
+        <Link to="/about#ourMission" className="boxText md:flex hidden">ჩვენი მისია</Link>
+        <br />
+        <Link to="/about#ourPriorities" className="boxText md:flex hidden">ჩვენი პრიორიტეტები</Link>
         <br/>
-        <Link to="/about#whoWeAre" className="boxText">ვინ ვართ ჩვენ</Link>
-        <br/>
-        <Link to="/about#ourMission" className="boxText">ჩვენი მისია</Link>
-        <br/>
-        <Link to="/about#ourPriorities" className="boxText">ჩვენი პრიორიტეტები</Link>
-        <br/>
-        <Link to="/about#ourExperience" className="boxText">ჩვენი გამოცდილება</Link>
+        <Link to="/about#ourExperience" className="boxText md:flex hidden">ჩვენი გამოცდილება</Link>
     </div>
 
     <div className="flex flex-col">
-        <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="footerBoxHeading">დაგვიკავშირდით</Link>
+        <Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="footerBoxHeading">დაგვიკავშირდი</Link>
         <br/>
         <Link to="tel:+995555283839" className="boxText flex flex-row items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14" className="mr-1 mt-[1px]">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
@@ -76,9 +76,9 @@ return(<>
 </div>
 
 
-<div className="flex flex-col contentContainer justify-center mt-35">
+<div className="flex flex-col contentContainer justify-center md:mt-35 mt-5">
 <hr className="horizontalLineInDivBott my-5" />
-<Link to="facebook.com" className="flex iconDiv mt-3 mb-5 justify-center items-center">
+<Link to="facebook.com" className="flex iconDiv mt-3 md:mb-5 mb-2 justify-center items-center">
     <svg fill="#6e777a" width="16px" height="16px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" className="icon iconLogo">
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
     <g id="SVGRepo_iconCarrier"> <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6 44.2 0 82.1 3.3 93.2 4.8v107.9z"></path> </g>

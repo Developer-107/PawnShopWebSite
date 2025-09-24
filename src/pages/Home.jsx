@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
 import Slider from "../components/Slider";
 import MainPageAboutUs from "../components/MainPageAboutUs";
 import MainPageIclouldInfo from "../components/MainPageIcloudInfo";
@@ -28,7 +27,7 @@ export default function Home() {
     <>
     <Slider/>
     <div className="flex justify-center">
-    <div className="mt-[5rem]  contentContainer">
+    <div className="mt-[5rem] contentContainer">
     
     <MainPageAboutUs/>
     <MainPageIclouldInfo/>

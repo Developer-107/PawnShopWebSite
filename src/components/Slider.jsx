@@ -25,10 +25,10 @@ const slides = [
       img: Slider1,
       text: (
         <>
-          დატოვე აიქლაუდი <br /> თანხის სანაცვლოდ
+          დატოვე აიქლაუდი თანხის სანაცვლოდ
         </>
       ),
-      top: "5rem",
+      top: "7rem",
     },
     {
       img: Slider2,
@@ -61,7 +61,7 @@ useEffect(() => {
 
 return(<>
 
-<div className="my-3">
+<div className="my-3 px-2 md:px-5">
 <div className="slideshow-container">
 
     
@@ -69,8 +69,8 @@ return(<>
 
                     <div key={ (i + 1)}    className={`slide ${currentSlide === (i + 1) ? "active" : ""}`}>
                         <img  src={slide.img} className={`sliderImage ${currentSlide ===  (i + 1) ? "active" : ""}`} alt="Slide 1" />
-                        <div  className="textButtonDiv text-slide-up" style={{top: slide.top}}>
-                        <div className="text">{slide.text}</div>
+                        <div  className="textButtonDiv text-slide-up">
+                        <div className="flex text">{slide.text}</div>
                         <button onClick={() => navigate("/contact")} className="button">დაგვიკავშირდი</button>
                         </div>
                     </div>

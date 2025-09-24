@@ -24,7 +24,7 @@ useEffect(() => {
   return (
     <>
     <div id='about' className="flex justify-center whiteWholeBG ">
-    <div className="mt-[5rem]  contentContainer">
+    <div className="md:mt-[5rem] mt-[2rem] contentContainer">
     
     <h1 id="aboutUs">ჩვენ შესახებ</h1>
 <br/>
@@ -94,7 +94,7 @@ useEffect(() => {
 
   {isVacanciesOpen && (
     <div className="" >
-    <hr className="w-1/2 mx-auto mt-[20px] self-center horizontalLineInDiv"/>
+    <hr className="w-1/2 mx-auto mt-[20px] self-center horizontalLineInDivBott"/>
     <div className="mt-4 vacanciesContent fadeIn transition-transform duration-500 ease-in-out px-4">
       <br/>
 <h3 className="mb-3">მოლარე/კონსულტანტი</h3>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import HorizontalScroll from "./HorizontalScroll";
 
 
 
@@ -8,10 +9,11 @@ export default function MainPagePercents(){
     return (<>
 
         <div className="flex flex-col mt-40 items-center">
-            <div className="mr-auto"><p style={{fontSize: "22.5px"}} className="font-bold">ჩვენი უპირატესობები</p></div>
+            <div className="mr-auto"><p  className="font-bold xl:text-[22.5px] text-[17.9px]">ჩვენი უპირატესობები</p></div>
             <br/>
 
-            <div className="flex flex-row justify-between justify-center gap-4" style={{width: "100%"}}>
+            <div className="flex flex-row justify-between gap-4 w-[100%] custom-scroll" >
+                <HorizontalScroll>
                     <Link to="/rules#pricing" className="flex flex-col PercentCubeImageContainer flex-shrink-0 mr-auto" >
                         <div className="flex justify-center items-center percentIconContainer">
                             <h4 className=" percentNum justify-center">
@@ -71,7 +73,7 @@ export default function MainPagePercents(){
                             </h4>
                         </div>
                         <br/>
-                        <h2 className="boxHeading mt-[3px]">თავისუფალი გადახდის გრაფიკი</h2>
+                        <h2 className="boxHeading mt-[3px]">თავისუფალი გრაფიკი</h2>
                         <br/>
                         <p className="boxText">დააკლიკე და იხილე მეტი</p>
                         </Link>
@@ -82,7 +84,7 @@ export default function MainPagePercents(){
 
 
 
-
+</HorizontalScroll>
 
 
             </div>

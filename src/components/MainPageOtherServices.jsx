@@ -15,13 +15,13 @@ export default function MainPageOtherServices() {
   return (
     
     <div className="flex flex-col mt-40 items-center">
-    <div className="mr-auto"><p style={{fontSize: "22.5px"}} className="font-bold ">სხვა მომსახურებები</p></div>
+    <div className="mr-auto xl:text-[22.5px] text-[17.9px]"><p className="font-bold ">სხვა მომსახურებები</p></div>
     <br/>
 
-    <div className="flex flex-row">
+    <div className="flex w-[100%] lg:flex-row flex-col lg:gap-0 gap-[22px]">
 
    
-    <Link to="/rules#pawningItem" className="mr-auto leaveItemContainer">
+    <Link to="/rules#pawningItem" className="lg:mr-auto leaveItemContainer">
         <img className="leaveItem" src={leaveItem} alt="Leave item Photo" />
         <div className="textOnContainer textOnDiv">ნივთის დატოვება</div>
         </Link>

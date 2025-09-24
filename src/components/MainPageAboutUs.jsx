@@ -10,7 +10,7 @@ return(<div>
          გაყიდვასა თუ მის შეძენას.  </h1>
     <br/>
     <br/>
-    <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center text-[#2f62a1] text-[19px] font-bold"> <svg
+    <Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center text-[#2f62a1] xl:text-[19px] text-[16px] font-bold"> <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"  // IMPORTANT for scaling
 

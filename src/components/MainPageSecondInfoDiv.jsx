@@ -11,12 +11,12 @@ export default function MainPageSecondInfoDiv() {
   
   return (
     
-    <div className="flex mt-25 items-center">
+    <div className="flex md:flex-row flex-col gap-7 mt-25 items-center containFlex-1s">
     
     
-    <div className="flex almostCubeImageContainer flex-shrink-0 !ml-[0px]" ><img className="almostCubeImg"  src={SellingItem} alt="" /></div>
+    <div className="flex-1 almostCubeImageContainer flex-shrink-0 !ml-[0px]" ><img className="almostCubeImg"  src={SellingItem} alt="" /></div>
 
-    <div className="ml-auto" > 
+    <div className="flex-1 md:ml-7" > 
         
         
         
