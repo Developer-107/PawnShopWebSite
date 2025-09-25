@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Rules() {
 
 const { pathname, hash } = useLocation();
-
+const navigate = useNavigate();
 useEffect(() => {
   if (hash) {
     const element = document.querySelector(hash);
