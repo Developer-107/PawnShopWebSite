@@ -122,7 +122,7 @@ export default function Navbar({className}) {
           </button>
         </div>
         {isOpen && (
-          <div className={`flex flex-col md:hidden absolute top-full right-0 sm:w-[35%] w-[50%] h-screen shadow-md justify-start items-end ${scrolledUp ? "bg-white/95 backdrop-blur-md" : "bg-[#fafafa]"
+          <div className={`flex flex-col md:hidden absolute top-full right-0 sm:w-[35%] w-[55%] h-screen shadow-md justify-start items-end ${scrolledUp ? "bg-white/95 backdrop-blur-md" : "bg-[#fafafa]"
   }`}>
             
           
