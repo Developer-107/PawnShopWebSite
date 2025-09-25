@@ -77,7 +77,7 @@ export default function Navbar({className}) {
           
           
           <div className="md:hidden ml-auto flex items-center">
-          <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none hover:bg-gray-100 active:bg-gray-200 p-2 mx-[-0.5rem] rounded-md">
+          <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none hover:bg-gray-100 active:bg-gray-200 p-2 mx-[-0.5rem] rounded-md cursor-pointer">
             <svg
       className="w-8 h-8 text-gray-500"
       viewBox="0 0 28 28"
