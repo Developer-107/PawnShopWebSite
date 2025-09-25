@@ -31,7 +31,7 @@ useEffect(() => {
         <div className="rulesTitleContainer">
       <h1 className="rulesTitle">პირობები</h1>
       <h2 className="rulesSubtitle">მარტივი პირობები, მეტი შესაძლებლობები</h2>
-      <button className="button">დაგვიკავშირდი</button>  
+      <button onClick={() => navigate("/contact")} className="button">დაგვიკავშირდი</button>  
 
         </div>
     </div>
