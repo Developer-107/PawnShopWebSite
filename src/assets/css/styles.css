@@ -921,32 +921,12 @@ h2{
         width: 100% !important;
     }
 
-    .itemContainer{
-  width: 201px;
-  height: 268px;
-}
 
-.buttonInItemsBuy {
- 
-  padding: 8px 40px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 0.70rem;
-  margin-bottom: 1rem;
-} 
 
-.buttonInItemsBuyCall{
-  margin-top: 0.70rem;
-  margin-bottom: 1rem;
-}
 
-.buttonInItemsContainer {
-    width: 100%;
-    padding-right: 17px;
-   
-}
+
+
+
 
 #item .buttonInItemsBuy {
   width: 100% !important;
@@ -964,6 +944,10 @@ display: flex !important;
 
 
 
+#items h1{
+  font-size: 17.43px;
+  font-weight: 700;
+}
 
 
 

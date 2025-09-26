@@ -23,6 +23,39 @@ export default function Items() {
     });
 }, []);
 
+const productList = [
+  { id: 1, brand: "Samsung", model: "G10i", state: "უხმარი", pricesale: 1000, pricebefore: 1400, url: "https://mobilebazar.com.bd/assets/img/Samsung-Galaxy-S24.webp", type: "მობილური" },
+  { id: 2, brand: "LG", model: "OLED C1", state: "უხმარი", pricesale: 2000, pricebefore: 2500, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOCLMqp7pz0tLjKm2tCeJOeJ2EJ5Y5kkmf2w&s", type: "ტელევიზორი" },
+  { id: 3, brand: "iPhone", model: "14", state: "უხმარი", pricesale: 1400, pricebefore: 1700, url: "https://m.media-amazon.com/images/I/619f09kK7tL.jpg", type: "მობილური" },
+  { id: 4, brand: "Samsung Galaxy", model: "S23", state: "უხმარი", pricesale: 1300, pricebefore: 1600, url: "https://usmobi.ge/wp-content/uploads/2024/06/s23.png", type: "მობილური" },
+  { id: 5, brand: "Dell", model: "XPS 15", state: "უხმარი", pricesale: 2200, pricebefore: 2500, url: "https://cdn.allmarket.ge/2405/51/31/83/59eab7e814a64a47881c919da742c4d3/74169-588149.jpg", type: "ლეპტოპი" },
+  { id: 6, brand: "MacBook", model: "Pro 16", state: "უხმარი", pricesale: 3500, pricebefore: 4000, url: "https://top-cyprus.cy/image/cache/catalog/1MacbookPro16m3Pro/Macbook_Pro_16_m3_pro_space_black_buy_cyprus-1000x1000.jpg", type: "ლეპტოპი" },
+  { id: 7, brand: "Sony", model: "WH-1000XM5", state: "უხმარი", pricesale: 800, pricebefore: 1000, url: "https://helpguide.sony.net/mdr/wh1000xm5/v1/en/contents/image/Top_image_WH-1000XM5.png", type: "ყურსასმენი" },
+  { id: 8, brand: "Acer", model: "Aspire 7", state: "უხმარი", pricesale: 1100, pricebefore: 1400, url: "https://m.media-amazon.com/images/I/71a02XjMJnL._UF1000,1000_QL80_.jpg", type: "ლეპტოპი" },
+  { id: 9, brand: "MSI", model: "Katana GF66", state: "უხმარი", pricesale: 1500, pricebefore: 1800, url: "https://cdn.allmarket.ge/2405/61/86/80/d3dcda6fd3004a3c963cccbae496df8a/84849-687928.jpg", type: "ლეპტოპი" },
+  { id: 10, brand: "OnePlus", model: "11 5G", state: "უხმარი", pricesale: 900, pricebefore: 1200, url: "https://megga.ge/files/products/ciIbAV6S6SPTSmy6BoawPP9Mgrfebe.jpg", type: "მობილური" },
+  { id: 11, brand: "Realme", model: "GT Neo 5", state: "უხმარი", pricesale: 750, pricebefore: 1000, url: "https://ae01.alicdn.com/kf/Sda2fad95fb9249b7a2cd4b6a58e4cb4eI.png", type: "მობილური" },
+  { id: 12, brand: "Panasonic", model: "Lumix GH6", state: "უხმარი", pricesale: 2200, pricebefore: 2600, url: "https://m.media-amazon.com/images/I/81WeGNHq6UL._UF894,1000_QL80_.jpg", type: "სხვა" },
+  { id: 13, brand: "Fujifilm", model: "X-T5", state: "უხმარი", pricesale: 1800, pricebefore: 2200, url: "https://i0.wp.com/fujifilmxindia.com/wp-content/uploads/2025/02/X-T5_front_CMOS_black-1-scaled.jpg?fit=2560%2C2560&ssl=1", type: "სხვა" },
+  { id: 14, brand: "JBL", model: "Live 660NC", state: "უხმარი", pricesale: 250, pricebefore: 400, url: "https://m.media-amazon.com/images/I/61cjF3Y4pwL.jpg", type: "ყურსასმენი" },
+  { id: 15, brand: "Beats", model: "Studio Pro", state: "უხმარი", pricesale: 300, pricebefore: 500, url: "https://incredideals.co/cdn/shop/files/MQTQ3.png?v=1737698049&width=416", type: "ყურსასმენი" },
+  { id: 16, brand: "Nintendo", model: "Switch OLED", state: "უხმარი", pricesale: 350, pricebefore: 500, url: "https://icity.ge/wp-content/uploads/2023/12/Nintendo-Switch-OLED-550x550.webp", type: "კონსოლი" },
+  { id: 17, brand: "Valve", model: "Steam Deck 512GB", state: "უხმარი", pricesale: 500, pricebefore: 700, url: "https://s3.zoommer.ge/zoommer-images/thumbs/0188721_steam-deck-console-512gb-black_550.jpeg", type: "კონსოლი" },
+  { id: 18, brand: "Philips", model: "55OLED806", state: "უხმარი", pricesale: 1700, pricebefore: 2100, url: "https://imart.ge/images/detailed/161/Untitled-12_tahm-jo.jpg", type: "ტელევიზორი" },
+  { id: 19, brand: "TCL", model: "C835 Mini LED", state: "უხმარი", pricesale: 1300, pricebefore: 1600, url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1X-qSXgmPs1kvF6fzwis-8OHM5lL3fWVMQw&s", type: "ტელევიზორი" },
+  { id: 20, brand: "Razer", model: "Blade 15", state: "უხმარი", pricesale: 2000, pricebefore: 2500, url: "https://tmarket.ge/wp-content/uploads/2023/04/razerblade15-1.webp", type: "ლეპტოპი" },
+  { id: 21, brand: "Gigabyte", model: "Aero 16", state: "უხმარი", pricesale: 2100, pricebefore: 2600, url: "https://m.media-amazon.com/images/I/61qIFqcwZyL._UF894,1000_QL80_.jpg", type: "ლეპტოპი" },
+  { id: 22, brand: "Motorola", model: "Edge 40 Pro", state: "უხმარი", pricesale: 800, pricebefore: 1050, url: "https://motorolaroe.vtexassets.com/arquivos/ids/157285-800-auto?width=800&height=auto&aspect=true", type: "მობილური" },
+  { id: 23, brand: "Iphone", model: "17 Pro Max", state: "უხმარი", pricesale: 12999, pricebefore: 14999, url: "https://icity.ge/wp-content/uploads/2025/07/iPhone-17-Pro-Max-Deep-Blue-1-550x550.webp", type: "მობილური" },
+  { id: 24, brand: "DJI", model: "Mini 3 Pro Drone", state: "უხმარი", pricesale: 700, pricebefore: 950, url: "https://coptertech.ge/wp-content/uploads/2022/06/3a4bfa1d1318504e873fb70ff2047703@origin.jpg", type: "სხვა" },
+  { id: 25, brand: "GoPro", model: "Hero 11 Black", state: "უხმარი", pricesale: 400, pricebefore: 600, url: "https://megga.ge/files/products/yhHxjDYym3yBSmpzbfjzCk5MqOAaR.jpg", type: "სხვა" },
+  { id: 26, brand: "SteelSeries", model: "Nova", state: "უხმარი", pricesale: 350, pricebefore: 500, url: "https://gitec.ge/images/thumbs/0074763_61670_ss_550.png", type: "ყურსასმენი" },
+  { id: 27, brand: "Logitech", model: "G Pro X Wireless", state: "უხმარი", pricesale: 250, pricebefore: 400, url: "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-wireless/pro-wireless-headset-gallery-1.png?v=1", type: "ყურსასმენი" }
+];
+
+useEffect(() => {
+    setList(productList);
+  }, []);
 
   const filteredList = list.filter(
     (item) => {
@@ -651,7 +684,7 @@ export default function Items() {
       {isFilterOpen && ( <>
         <div className="flex lg:hidden fixed bottom-0 right-0 h-[100%] w-screen bg-black/5 z-9 py-2"></div>
         <div className="flex lg:hidden fixed bottom-0 right-0 h-[70%] w-screen bg-[#ffffff] z-10 py-2 overflow-y-auto no-scrollbar">
-            <div className="lg:hidden flex-col items-center w-[100%] px-[19px] pl-10 py-1">
+            <div className="lg:hidden flex-col items-center w-[100%] px-[19px] pl-5 py-1">
             <div className="flex flex-row mr-auto justify-between items-center gap-2 pt-[5px] !text-[10.7px]">
               <div className="cursor-pointer"><svg onClick={() => setFilterOpen(false)} xmlns="http://www.w3.org/2000/svg" className="ml-1" width="1em" height="1em" fill="none" viewBox="0 0 10 10" class="sc-b65f0884-4 iYrBnu"><path stroke="#344054" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 1 1 9m0-8 8 8"></path></svg></div>
               <h2 className="mr-auto !text-[12.7px]">ფილტრი</h2>
