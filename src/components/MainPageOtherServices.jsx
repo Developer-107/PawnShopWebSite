@@ -34,9 +34,9 @@ export default function MainPageOtherServices() {
 
         </Link>
     <br/>
-    <Link to="/rules#sellingItem" className="similarImgsContainer block">
-        <img className="sellItem" src={sellItem} alt="Sell item Photo" />
-        <div className="textOnSimilarContainer textOnDiv z-10 absolute">ნივთის გაყიდვა</div>
+    <Link to="/rules#sellingItem" className="similarImgsContainer relative block">
+        <img className="sellItem relative z-10" src={sellItem} alt="Sell item Photo" />
+        <div className="textOnSimilarContainer textOnDiv z-20">ნივთის გაყიდვა</div>
         </Link>
     </div>
     </div>
