@@ -9,7 +9,7 @@ export default function MainPagePercents(){
     return (<>
 
         <div className="flex flex-col mt-40 items-center">
-            <div className="mr-auto"><p  className="font-bold xl:text-[22.5px] text-[17.9px]">ჩვენი უპირატესობები</p></div>
+            <div className="mr-auto"><p  className="font-bold xl:text-[22.5px] md:text-[17.9px] text-[16.1px]">ჩვენი უპირატესობები</p></div>
             <br/>
 
             <div className="flex flex-row justify-between gap-4 w-[100%] custom-scroll" >
