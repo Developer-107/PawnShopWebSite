@@ -131,6 +131,7 @@ h2{
 }
 
 .textOnContainer{color: #f2f2f2;
+  -webkit-text-fill-color: #f2f2f2;
   font-size: 20.8px;
   width: 100%;
   height: 35%;
@@ -144,6 +145,7 @@ h2{
 
 
 .textOnSimilarContainer{
+  -webkit-text-fill-color: #f2f2f2;
   color: #f2f2f2;
   font-size: 20.8px;
   width: 100%;

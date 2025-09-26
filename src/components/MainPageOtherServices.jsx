@@ -21,8 +21,8 @@ export default function MainPageOtherServices() {
     <div className="flex w-[100%] lg:flex-row flex-col lg:gap-0 gap-[22px]">
 
    
-    <Link to="/rules#pawningItem" className="lg:mr-auto leaveItemContainer relative">
-        <img className="leaveItem relative" src={leaveItem} alt="Leave item Photo" />
+    <Link to="/rules#pawningItem" className="lg:mr-auto leaveItemContainer">
+        <img className="leaveItem" src={leaveItem} alt="Leave item Photo" />
         <div className="textOnContainer textOnDiv">ნივთის დატოვება</div>
         </Link>
     
