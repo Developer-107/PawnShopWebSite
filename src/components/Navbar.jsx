@@ -127,13 +127,13 @@ export default function Navbar({className}) {
             
           
           <hr className="horizontalLineInDiv mb-3 self-center" style={{width: "82.7%"}}/>
-          <Link className="flex md:text-[17px] text-[14px] font-semibold text-gray-500 m-5 mx-10" to="/" onClick={() =>{ window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);}}>მთავარი</Link>
-          <Link className="flex items-center md:text-[17px] text-[14px] font-semibold text-gray-500 m-5 mx-10" to="/about" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);}}>ჩვენს შესახებ</Link>
-          <Link className="flex items-center m-5 mx-10 md:text-[17px] text-[14px] font-bold text-[#2f62a1] font-bold" to="/items" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);}}>გასაყიდი ნივთები</Link>
-          <Link className="flex items-center md:text-[17px] text-[14px] font-semibold text-gray-500 m-5 mx-10" to="/rules" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);}}>პირობები</Link>
+          <Link className="flex md:text-[17px] md:text-[14px] text-[12px] font-semibold text-gray-500 m-5 mx-10" to="/" onClick={() =>{ window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);}}>მთავარი</Link>
+          <Link className="flex items-center md:text-[17px] md:text-[14px] text-[12px] font-semibold text-gray-500 m-5 mx-10" to="/about" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);}}>ჩვენს შესახებ</Link>
+          <Link className="flex items-center m-5 mx-10 md:text-[17px] md:text-[14px] text-[12px] font-bold text-[#2f62a1] font-bold" to="/items" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);}}>გასაყიდი ნივთები</Link>
+          <Link className="flex items-center md:text-[17px] md:text-[14px] text-[12px] font-semibold text-gray-500 m-5 mx-10" to="/rules" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);}}>პირობები</Link>
           
         
-          <Link className={`flex items-center md:text-[17px] text-[14px] font-semibold text-gray-500 m-5 mx-10`}   style={{position: "absolute", top: `${Math.max((screenHeight - 170), 251.4)}px`}} // in pixels
+          <Link className={`flex items-center md:text-[17px] md:text-[14px] text-[12px] font-semibold text-gray-500 m-5 mx-10`}   style={{position: "absolute", top: `${Math.max((screenHeight - 170), 251.4)}px`}} // in pixels
  to="/contact" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); setIsOpen(false);}}>კონტაქტი </Link>
           </div>
           
