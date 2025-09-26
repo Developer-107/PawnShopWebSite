@@ -21,8 +21,8 @@ export default function MainPageOtherServices() {
     <div className="flex w-[100%] lg:flex-row flex-col lg:gap-0 gap-[22px]">
 
    
-    <Link to="/rules#pawningItem" className="lg:mr-auto leaveItemContainer">
-        <img className="leaveItem" src={leaveItem} alt="Leave item Photo" />
+    <Link to="/rules#pawningItem" className="lg:mr-auto leaveItemContainer relative">
+        <img className="leaveItem relative" src={leaveItem} alt="Leave item Photo" />
         <div className="textOnContainer textOnDiv">ნივთის დატოვება</div>
         </Link>
     
@@ -34,9 +34,9 @@ export default function MainPageOtherServices() {
 
         </Link>
     <br/>
-    <Link to="/rules#sellingItem" className="similarImgsContainer relative block">
-        <img className="sellItem relative z-10" src={sellItem} alt="Sell item Photo" />
-        <div className="textOnSimilarContainer textOnDiv z-20 !text-[black]">ნივთის გაყიდვა</div>
+    <Link to="/rules#sellingItem" className="similarImgsContainer block">
+        <img className="sellItem" src={sellItem} alt="Sell item Photo" />
+        <div className="textOnSimilarContainer textOnDiv">ნივთის გაყიდვა</div>
         </Link>
     </div>
     </div>
