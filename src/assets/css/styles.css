@@ -952,7 +952,9 @@ display: flex !important;
   font-weight: 700;
 }
 
-
+.threeScreenSizeDiv{
+  height: 178px !important;
+}
 
 
 
