@@ -21,10 +21,16 @@ export default function MainPageOtherServices() {
     <div className="flex w-[100%] lg:flex-row flex-col lg:gap-0 gap-[22px]">
 
    
-    <Link to="/rules#pawningItem" className="lg:mr-auto leaveItemContainer">
-        <img className="leaveItem" src={leaveItem} alt="Leave item Photo" />
-        <div className="textOnContainer textOnDiv">ნივთის დატოვება</div>
-        </Link>
+    <Link to="/rules#pawningItem" className="relative block lg:mr-auto overflow-hidden rounded-lg leaveItemContainer group">
+  <img
+    src={leaveItem}
+    alt="Leave item Photo"
+    className="leaveItem w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+  />
+  <div className="absolute bottom-4 left-4 text-white font-semibold text-lg z-10">
+    ნივთის დატოვება
+  </div>
+</Link>
     
 
     <div >
