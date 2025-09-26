@@ -126,6 +126,7 @@ h2{
 .textOnDiv {
     padding: 8px 12px;
   position: absolute;
+  z-index: 20;
   /* top: 8rem;
   left:10rem; */
 }
