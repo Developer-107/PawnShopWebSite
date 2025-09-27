@@ -144,7 +144,7 @@ export default function Navbar({className}) {
 
         
           <Link className="hidden md:flex items-center m-5 ml-16" to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>მთავარი</Link>
-          <Link className="hidden md:flex items-center m-5" to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>ჩვენს შესახებ</Link>
+          <Link className="hidden md:flex items-center m-5" to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>ჩვენ შესახებ</Link>
           <Link className="hidden md:flex items-center m-5 text-[#2f62a1] font-semibold" to="/items" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>გასაყიდი ნივთები</Link>
           <Link className="hidden md:flex items-center m-5" to="/rules" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>პირობები</Link>
           <Link className="hidden md:flex items-center my-5 !ml-auto mx-2 " to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>კონტაქტი </Link>
