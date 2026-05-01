@@ -23,7 +23,7 @@ export default function MainPageIclouldInfo() {
         <p className="text-[#545e61]"> ჩვენ ტექნიკის სახლში შენ შეძლებ აიქლაუდის დატოვების  <br/>
              სანაცვლოდ აიღო შენსთვის სასურველი თახნა მომგებიან პირობებში </p>
         <br></br>
-        <button onClick={() => navigate("/rules#pawningIcloud")} class="button">პირობების ნახვა</button>
+        <button onClick={() => navigate("/rules#pawningIcloud")} className="button">პირობების ნახვა</button>
 
      </div>
     

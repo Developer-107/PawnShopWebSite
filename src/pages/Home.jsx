@@ -3,7 +3,6 @@ import { useState } from "react";
 import { redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
 import Navbar from "../components/Navbar";
 import Slider from "../components/Slider";
 import MainPageAboutUs from "../components/MainPageAboutUs";
@@ -13,37 +12,22 @@ import MainPageInvitationDiv from "../components/MainPageInvitationDiv.jsx";
 import MainPageSecondInfoDiv from "../components/MainPageSecondInfoDiv.jsx";
 import MainPagePercents from "../components/MainPagePercents.jsx";
 
-
-
 export default function Home() {
-
-
-
-
-
-
-  
   return (
     <>
-    <Slider/>
-    <div className="flex justify-center">
-    <div className="mt-[5rem] contentContainer">
-    
-    <MainPageAboutUs/>
-    <MainPageIclouldInfo/>
-    <MainPageOtherServices/>
+      <Slider />
+      <div className="flex justify-center">
+        <div className="mt-[5rem] contentContainer">
+          <MainPageAboutUs />
+          <MainPageIclouldInfo />
+          <MainPageOtherServices />
 
-    
-    <MainPageInvitationDiv/>
-    <MainPageSecondInfoDiv/>
+          <MainPageInvitationDiv />
+          <MainPageSecondInfoDiv />
 
-
-    <MainPagePercents/>
-
-    </div>
-    </div>
-
-  </>
-
-  );}
- 
+          <MainPagePercents />
+        </div>
+      </div>
+    </>
+  );
+}

@@ -3,8 +3,11 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { Pool } from "pg";
 import dotenv from "dotenv";
+import { protect } from "./middlewares/Middleware.js";
 
-
+import ItemRoutes from "./routes/ItemRoutes.js";
+import AdminRoutes from "./routes/AdminRoutes.js";
+import AuthRoutes from "./routes/AuthRoutes.js";
 
 dotenv.config();
 
@@ -12,84 +15,40 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
+
 
 const client = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }, // needed on Railway
+  ssl: false,
 });
-
 
 client.connect()
   .then(() => console.log("DB connected!"))
   .catch(err => console.error("DB connection error:", err));
 
 
-
-
 app.use(express.json());
 
-
-app.get("/api/items", async (req, res) => {
-
-try{
-
-    const result = await client.query( "SELECT * FROM items");
-
-    res.json({
-            list: result.rows
-    }) 
-
-    } catch (err) {
-     console.error(err);
-    res.status(500).send("Error fetching items");
-    }
-
-});
- 
-
-app.get("/api/item/:id", async (req, res) => {
-
-
-
-try{
-    const id = req.params.id;
-
-    const result = await client.query( "SELECT * FROM items WHERE id=$1", [id]);
-    console.log(result)
-
-    res.json({
-        item: result.rows[0]
-    })
-
-
-} catch (err) {
-    console.log(err);
-res.status(500).send("Error fetching items")
-}
-
+// DB middleware
+app.use((req, res, next) => {
+  req.db = client;
+  next();
 });
 
+// API ROUTES FIRST
+app.use("/api/items", ItemRoutes);
+app.use("/api/admin", AdminRoutes);
+app.use("/api/auth", AuthRoutes);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Serve static files from Vite build
+// STATIC FILES
 app.use(express.static(path.join(__dirname, "dist")));
 
-// Return index.html for all other routes
-app.get(/^\/.*$/, (req, res) => {
+// SAFE FALLBACK (IMPORTANT FIX)
+app.get("/{*splat}", (req, res) => {
+  if (req.path.startsWith("/api")) {
+    return res.status(404).json({ error: "API not found" });
+  }
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 

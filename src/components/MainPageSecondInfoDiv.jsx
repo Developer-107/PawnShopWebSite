@@ -26,7 +26,7 @@ export default function MainPageSecondInfoDiv() {
                                         თუ არა შენთვის სასურველი ნივთი გასაყიდად, <br/>
                                          მიიღო გასაყიდ ნივთების მდგომარეობასა და ფასის შესახებ <br/>ინფორმაცია </p>
         <br></br>
-        <button onClick={() => navigate("/items")} class="button">გასაყიდი ნივთების ნახვა</button>
+        <button onClick={() => navigate("/items")} className="button">გასაყიდი ნივთების ნახვა</button>
 
      </div>
     
