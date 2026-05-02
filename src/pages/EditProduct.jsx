@@ -17,6 +17,7 @@ export default function EditProduct() {
   const [priceSale, setPriceSale] = useState("");
   const [priceBefore, setPriceBefore] = useState("");
   const [type, setType] = useState("");
+  const [mobNumber, setMobNumber] = useState("");
   const [imageFiles, setImageFiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [delWidnowOpen, setDelWindowOpen] = useState(false);
@@ -57,6 +58,7 @@ export default function EditProduct() {
         setPriceSale(productData.pricesale || "");
         setPriceBefore(productData.pricebefore || "");
         setType({ value: productData.type, label: productData.type } || "");
+        setMobNumber(productData.mobnumber || "");
       } catch (err) {
         console.error("პროდუქტი ვერ მოიძებნა:", err);
       } finally {
@@ -88,6 +90,7 @@ export default function EditProduct() {
     if (!priceSale) return alert("ფასდაკლებული ფასის მითითება აუცილებელია");
     if (!priceBefore) return alert("ფასის აუცილებელია");
     if (!type) return alert("ტიპის მითითება აუცილებელია");
+    if (!mobNumber) return alert("ტელეფონის ნომრის მითითება აუცილებელია");
     if (!imageFiles.length === 0) return alert("პროდუქტის სურათი აუცილებელია");
 
     setLoading(true);
@@ -109,6 +112,7 @@ export default function EditProduct() {
         state,
         priceSale,
         priceBefore,
+        mobNumber,
         imageUrls,
         type: type.value,
       });
@@ -122,6 +126,7 @@ export default function EditProduct() {
       setState("");
       setPriceSale("");
       setPriceBefore("");
+      setMobNumber("");
       setType("");
       navigate("/admin");
     } catch (err) {
@@ -167,11 +172,12 @@ export default function EditProduct() {
               className="bg-gray-50 border rounded px-3 py-2"
             />
 
-            <Select
-              options={categories}
-              value={type}
-              onChange={setType}
-              placeholder={"კატეგორია"}
+            <input
+              name="mobnumber"
+              placeholder="მობილურის ნომერი"
+              value={mobNumber}
+              onChange={(e) => setMobNumber(e.target.value)}
+              className="bg-gray-50 border rounded px-3 py-2"
             />
 
             <input
@@ -194,6 +200,14 @@ export default function EditProduct() {
               value={priceBefore}
               onChange={(e) => setPriceBefore(e.target.value)}
               className="bg-gray-50 border rounded px-3 py-2"
+            />
+
+            <Select
+              options={categories}
+              value={type}
+              onChange={setType}
+              placeholder={"კატეგორია"}
+              className="col-span-2"
             />
 
             <div className="col-span-2 my-2">

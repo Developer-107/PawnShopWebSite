@@ -18,7 +18,7 @@ router.get("/items", async (req, res) => {
 // CREATE item
 router.post("/items", protect, async (req, res) => {
   try {
-    const { brand, model, state, priceSale, priceBefore, imageUrls, type } =
+    const { brand, model, state, priceSale, priceBefore, imageUrls, mobNumber, type } =
       req.body;
 
     if (
@@ -28,14 +28,15 @@ router.post("/items", protect, async (req, res) => {
       !priceSale ||
       !priceBefore ||
       !imageUrls ||
+      !mobNumber ||
       !type
     ) {
       return res.status(400).json({ error: "Missing fields" });
     }
 
     const result = await req.db.query(
-      "INSERT INTO items (brand, model, state, pricesale, pricebefore, type) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-      [brand, model, state, priceSale, priceBefore, type],
+      "INSERT INTO items (brand, model, state, pricesale, pricebefore, type, mobnumber) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *",
+      [brand, model, state, priceSale, priceBefore, type, mobNumber],
     );
     
     const item = result.rows[0];
@@ -71,6 +72,7 @@ router.put("/items/:id", protect, async (req, res) => {
       state,
       priceSale,
       priceBefore,
+      mobNumber,
       imageUrls,
       type,
     } = req.body;
@@ -84,6 +86,7 @@ router.put("/items/:id", protect, async (req, res) => {
       !priceSale ||
       !priceBefore ||
       !imageUrls ||
+      !mobNumber ||
       !type
     ) {
       return res.status(400).json({ error: "Missing fields" });
@@ -93,10 +96,10 @@ router.put("/items/:id", protect, async (req, res) => {
     // 1. update item
     const result = await req.db.query(
       `UPDATE items 
-       SET brand=$1, model=$2, state=$3, pricesale=$4, pricebefore=$5, type=$6 
-       WHERE id=$7 
+       SET brand=$1, model=$2, state=$3, pricesale=$4, pricebefore=$5, type=$6, mobnumber=$7 
+       WHERE id=$8 
        RETURNING *`,
-      [brand, model, state, priceSale, priceBefore, type, id]
+      [brand, model, state, priceSale, priceBefore, type, mobNumber, id]
     );
 
     // 2. delete old images

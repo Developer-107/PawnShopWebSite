@@ -46,13 +46,11 @@ export default function Admin() {
     <div className="w-full flex flex-col justify-center items-center">
       <div className="p-6 font-medium flex max-w-[1107px] w-full justify-between items-center">
         <div>
-        <h1 className="text-[32px] ">პროდუქტები</h1>
-        <p className="text-[14px]"> მართე პროდუქტები</p>
+          <h1 className="text-[32px] ">პროდუქტები</h1>
+          <p className="text-[14px]"> მართე პროდუქტები</p>
         </div>
 
-        
         <LogoutButton />
-
       </div>
       <div className="flex flex-col w-full h-full my-4 bg-[#f2f3f5] border-y-2 border-gray-200  p-6 gap-7 items-center justify-center">
         <div className="flex flex-col bg-white w-full h-full border rounded border-gray-200 p-5 pb-0 max-w-[1107px]">

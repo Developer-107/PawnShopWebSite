@@ -638,80 +638,87 @@ export default function Items() {
             </div>
             <br />
             <div className="grid [@media(min-width:945px)]:grid-cols-5 (max-width:1024px)]:grid-cols-5 xl:!grid-cols-4 lg:!grid-cols-3 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-10 p-4">
-              {loading
-                ? Array(8)
-                    .fill(0)
-                    .map((_, i) => <SkeletonCard key={i} />)
-                : sortedList.slice(0, visibleCount).map((item, index) => (
-                    <div
-                      key={item.id}
-                      className="itemContainer flex flex-col items-center"
-                    >
-                      <Link to={`/item/${item.id}`} state={{ item }}>
-                        <img
-                          src={item.main_image}
-                          alt={item.brand + " " + item.model}
-                          className="sm:w-32 h-32 object-cover mt-2 rounded pt-2"
-                        />
+              {loading ? (
+                Array(8)
+                  .fill(0)
+                  .map((_, i) => <SkeletonCard key={i} />)
+              ) : sortedList.length <= 0 ? (
+                <div className="flex col-span-4 h-[30vh] font-medium items-center justify-center">
+                  {" "}
+                  ნივთი ვერ მოიძებნა{" "}
+                </div>
+              ) : (
+                sortedList.slice(0, visibleCount).map((item, index) => (
+                  <div
+                    key={item.id}
+                    className="itemContainer flex flex-col items-center"
+                  >
+                    <Link to={`/item/${item.id}`} state={{ item }}>
+                      <img
+                        src={item.main_image}
+                        alt={item.brand + " " + item.model}
+                        className="sm:w-32 h-32 object-contain mt-2 rounded pt-2"
+                      />
+                    </Link>
+                    <br />
+                    <div className="flex flex-col self-start w-full h-18.5 ">
+                      <Link
+                        to={`/item/${item.id}`}
+                        state={{ item }}
+                        className="font-bold  pl-[22.5px]"
+                      >
+                        <h3 className="">
+                          {(item.brand + " " + item.model).length > 37
+                            ? (item.brand + " " + item.model).slice(0, 34) +
+                              "..."
+                            : item.brand + " " + item.model}
+                        </h3>
                       </Link>
-                      <br />
-                      <div className="flex flex-col self-start w-full h-18.5 ">
-                        <Link
-                          to={`/item/${item.id}`}
-                          state={{ item }}
-                          className="font-bold  pl-[22.5px]"
-                        >
-                          <h3 className="">
-                            {(item.brand + " " + item.model).length > 37
-                              ? (item.brand + " " + item.model).slice(0, 34) +
-                                "..."
-                              : item.brand + " " + item.model}
-                          </h3>
-                        </Link>
-                        <p className="lg:text-sm text-[10px] text-gray-500 pl-[22.5px]">
-                          {item.type}
-                        </p>
-                      </div>
-                      <p className="lg:text-[17px] text-[14px] text-green-700  font-bold self-start pl-[22.5px] lg:mt-[12px]">
-                        {item.pricesale}₾{" "}
-                        <span className="text-[14px] text-semibold line-through text-gray-400 ml-1">
-                          {item.pricebefore}₾
-                        </span>
+                      <p className="lg:text-sm text-[10px] text-gray-500 pl-[22.5px]">
+                        {item.type}
                       </p>
-                      <div className="flex buttonInItemsContainer lg:gap-4 gap-2 justify-end my-2 mb-4">
-                        <Link
-                          to="tel:+995555283839"
-                          className="flex justify-center buttonInItemsBuyCall"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            width="17"
-                            height="17"
-                            className=""
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M3 5c0-1.1.9-2 2-2h2.2c.4 0 .8.2 1 .6l1.7 3.4c.2.4.1.9-.2 1.2l-1.3 1.3a16 16 0 006.8 6.8l1.3-1.3c.3-.3.8-.4 1.2-.2l3.4 1.7c.4.2.6.6.6 1V19c0 1.1-.9 2-2 2h-1C9.7 21 3 14.3 3 6V5z"
-                            />
-                          </svg>
-                        </Link>
-                        <Link
-                          to={`/item/${item.id}`}
-                          state={{ item }}
-                          className="buttonInItemsBuy"
-                        >
-                          ნახვა
-                        </Link>
-                      </div>
                     </div>
-                  ))}
+                    <p className="lg:text-[17px] text-[14px] text-green-700  font-bold self-start pl-[22.5px] lg:mt-[12px]">
+                      {item.pricesale}₾{" "}
+                      <span className="text-[14px] text-semibold line-through text-gray-400 ml-1">
+                        {item.pricebefore}₾
+                      </span>
+                    </p>
+                    <div className="flex buttonInItemsContainer lg:gap-4 gap-2 justify-end my-2 mb-4">
+                      <Link
+                        to={`tel:${item?.mobnumber ? "+995" + item?.mobnumber : "+995555283839"}`}
+                        className="flex justify-center buttonInItemsBuyCall"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          width="17"
+                          height="17"
+                          className=""
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M3 5c0-1.1.9-2 2-2h2.2c.4 0 .8.2 1 .6l1.7 3.4c.2.4.1.9-.2 1.2l-1.3 1.3a16 16 0 006.8 6.8l1.3-1.3c.3-.3.8-.4 1.2-.2l3.4 1.7c.4.2.6.6.6 1V19c0 1.1-.9 2-2 2h-1C9.7 21 3 14.3 3 6V5z"
+                          />
+                        </svg>
+                      </Link>
+                      <Link
+                        to={`/item/${item.id}`}
+                        state={{ item }}
+                        className="buttonInItemsBuy"
+                      >
+                        ნახვა
+                      </Link>
+                    </div>
+                  </div>
+                ))
+              )}
             </div>
-            {list && visibleCount < list.length && (
+            {list && visibleCount < sortedList.length && (
               <div className="flex justify-center mt-4 ">
                 <button
                   onClick={handleShowMore}

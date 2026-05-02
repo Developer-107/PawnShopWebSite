@@ -14,6 +14,7 @@ export default function NewProducts() {
   const [state, setState] = useState("");
   const [priceSale, setPriceSale] = useState("");
   const [priceBefore, setPriceBefore] = useState("");
+  const [mobNumber, setMobNumber] = useState("");
   const [type, setType] = useState("");
   const [imageFiles, setImageFiles] = useState([]);
 
@@ -39,6 +40,7 @@ export default function NewProducts() {
       return alert("ფასდაკლებული ფასის მითითება აუცილებელია");
     if (!priceBefore.trim()) return alert("ფასის აუცილებელია");
     if (!type) return alert("ტიპის მითითება აუცილებელია");
+    if (!mobNumber) return alert("ტელეფონის ნომრის მითითება აუცილებელია");
     if (!imageFiles.length === 0) return alert("პროდუქტის სურათი აუცილებელია");
 
     setLoading(true);
@@ -53,6 +55,7 @@ export default function NewProducts() {
         state,
         priceSale,
         priceBefore,
+        mobNumber,
         imageUrls,
         type: type.value,
       });
@@ -67,6 +70,7 @@ export default function NewProducts() {
       setPriceSale("");
       setPriceBefore("");
       setType("");
+      setMobNumber("");
       navigate("/admin");
     } catch (err) {
       console.error(err);
@@ -102,11 +106,12 @@ export default function NewProducts() {
               className="bg-gray-50 border rounded px-3 py-2"
             />
 
-            <Select
-              options={categories}
-              value={type}
-              onChange={setType}
-              placeholder={"კატეგორია"}
+            <input
+              name="mobnumber"
+              placeholder="მობილურის ნომერი"
+              value={mobNumber}
+              onChange={(e) => setMobNumber(e.target.value)}
+              className="bg-gray-50 border rounded px-3 py-2"
             />
 
             <input
@@ -129,6 +134,14 @@ export default function NewProducts() {
               value={priceBefore}
               onChange={(e) => setPriceBefore(e.target.value)}
               className="bg-gray-50 border rounded px-3 py-2"
+            />
+
+            <Select
+              options={categories}
+              value={type}
+              onChange={setType}
+              placeholder={"კატეგორია"}
+              className="col-span-2"
             />
 
             <div className="col-span-2 my-2">
